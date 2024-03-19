@@ -1,0 +1,4 @@
+.env
+venv
+vcs.xml
+db.sqlite3
