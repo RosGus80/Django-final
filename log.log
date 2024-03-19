@@ -1,1 +1,1 @@
-OrderedDict([('place', 'some place'), ('action', 'some action'), ('time', 'idk some time i guess'), ('periodicity', 3), ('reward', 'smth'), ('time_to_complete', datetime.time(0, 2))])
+OrderedDict([('place', 'some place'), ('action', 'some action'), ('time', 'idk some time i guess'), ('periodicity', 3), ('reward', 'smth'), ('time_to_complete', datetime.time(0, 2)), ('pleasant_habit', <Habit: Habit object (3)>)])

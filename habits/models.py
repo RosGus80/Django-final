@@ -19,3 +19,4 @@ class Habit(models.Model):
     periodicity = models.PositiveSmallIntegerField(verbose_name='Периодичность в днях', default=1)
     reward = models.CharField(max_length=255, verbose_name='Награда')
     time_to_complete = models.TimeField(verbose_name='Время на выполнение', **NULLABLE)
+    is_public = models.BooleanField(default=False, verbose_name='Публичность привычки')
