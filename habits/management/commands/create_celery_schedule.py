@@ -3,6 +3,7 @@ from django_celery_beat.models import IntervalSchedule, PeriodicTask
 
 
 class Command(BaseCommand):
+    """Команда для подготовки базы данных к запуску celery задач"""
 
     def handle(self, *args, **options):
 

@@ -8,6 +8,8 @@ from habits.services import TGBot
 
 @shared_task
 def send_all_messages():
+    """Celery задача на каждый день для отправки всех уведомлений о привычках всем пользователям в случае, если
+    эта привычка была выполнена достаточно давно"""
     mybot = TGBot()
     queryset = Habit.objects.all()
     for habit in queryset:

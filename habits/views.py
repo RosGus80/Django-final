@@ -58,4 +58,3 @@ class HabitUpdateAPIView(generics.UpdateAPIView):
     queryset = Habit.objects.all()
     serializer_class = HabitSerializer
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
-
