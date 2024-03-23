@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 from users.models import User
@@ -20,3 +22,4 @@ class Habit(models.Model):
     reward = models.CharField(max_length=255, verbose_name='Награда')
     time_to_complete = models.TimeField(verbose_name='Время на выполнение', **NULLABLE)
     is_public = models.BooleanField(default=False, verbose_name='Публичность привычки')
+    last_reminder = models.DateField(verbose_name='Время последнего напоминания', default=datetime.date(2000, 1, 1), **NULLABLE)
