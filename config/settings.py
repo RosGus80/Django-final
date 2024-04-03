@@ -91,10 +91,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "postgres",
-        'USER': "postgres",
-        'PASSWORD': 'secretpassword',
+        'NAME': 'postgres',
+        'USER': 'postgres',
         'HOST': 'db',
+        'PORT': 8080,
+        'PASSWORD': "postgres"
     }
 }
 
@@ -150,11 +151,9 @@ REST_FRAMEWORK = {
 }
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_TIMEZONE = "Australia/Tasmania"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
-
 CELERY_BROKER_URL = 'redis://redis:6379/0'
 
