@@ -91,11 +91,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'docker-final',
-        'USER': 'postgres',
+        'NAME': "postgres",
+        'USER': "postgres",
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
         'HOST': 'db',
-        'PORT': 5432,
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
     }
 }
 
